@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Size;
+
 @Controller
 public class Ctrl {
 
@@ -32,5 +35,14 @@ public class Ctrl {
 		m.addObject("msg", "Country: " + country + " <=======>  Name:  " + name);
 		m.setViewName("success");
 		return m;
+	}
+
+	// Method with multiple arguments and fetching it from the map.
+	@RequestMapping(value="/map/{countryName}/{userName}", method=RequestMethod.GET)
+	public String getMapDataSanitize(@Valid @Size(min=6,max=6)  @PathVariable String input, @PathVariable Map<String, String> path) {
+
+		String country = input;  
+				
+		return country;
 	}
 }
