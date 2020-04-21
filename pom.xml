@@ -8,6 +8,13 @@
 	<name>SpringMvcPathVariable Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>1.0.0.GA</version>
+		</dependency>
+
 		<!-- Servlet API Dependency -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
